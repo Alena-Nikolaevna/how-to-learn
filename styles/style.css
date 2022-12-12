@@ -32,6 +32,8 @@
 
 .header__title {
   margin-left: 64px;
+  margin-top: 0;
+  margin-bottom: 0;
   width: 730px;
   line-height: 96px;
   font-size: 102px;
@@ -90,14 +92,11 @@
 
 .two-columns__brief { 
   width: 175px;
-  line-height: 1,2;
+  line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
   margin-top: 0;
-}
-
-.two-columns__link {
-  text-decoration: none;
+  margin-bottom: 0;
   color: #2f80ed;
 }
 
@@ -111,12 +110,11 @@
   font-size: 24px;
   font-weight: normal;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 30px;
 }
 
-.two-columns__paragraph_margin {
-  margin-top: 30px;
-  margin-bottom: 30px;
+.two-columns__paragraph:nth-of-type(3n) {
+ margin-bottom: 0;
 }
 
 .two-columns__span-accent {
@@ -180,7 +178,7 @@
 }
 
 .feynman {
-  height: 890px;
+  min-height: 890px;
   background-color: #f2f2f2;
   background-image: url(../images/feynman.png);
   background-size: 867px 637px;
@@ -188,6 +186,7 @@
   background-position: bottom left;
   position: relative;
   padding-top: 100px;
+  box-sizing: border-box;
 }
 
 .feynman__title {
@@ -223,42 +222,44 @@
 .kaufman {
   overflow: hidden;
   position: relative;
-  background-color: #1f1f1f; 
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: #1f1f1f;
 }
 
 .section-title_theme_dark {
   color: white;
-  margin-top: 90px;
-  z-index: 2;
+  z-index: 1;
   position: relative;
 }
 
 .section-subtitle_theme_dark {
   color: white;
-  z-index: 2;
+  z-index: 1;
   position: relative;
 }
 
 .table_theme_dark {
-  margin-bottom: 90px;
-  z-index: 2;
   position: relative;
+  z-index: 1;
 }
 
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
   width: 200px;
   color: white;
-  margin-right: 0;
   margin-top: 80px;
 }
 
 .kaufman__triangle {
-  position: absolute;
+  background-image: url(../images/kaufman-triangle.svg);
+  width: 877px;
+  height: 877px;
   right: -210px;
   top: 0;
-  background-size: 877px 877px;
-  z-index: 1;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .footer {
@@ -266,12 +267,13 @@
   background-color: #1f1f1f;
   padding-top: 60px;
   padding-bottom: 40px;
+  box-sizing: border-box;
+  display: flex;
 }
 
 .footer__columns {
   display: flex;
   width: 90%;
-  min-height: 350px;
   margin-left: auto;
   margin-right: auto;
   background-color: #1f1f1f;
@@ -318,7 +320,7 @@
   margin-bottom: 16px;
   list-style: none;
   margin-top: 0;
-  padding-left: 0; 
+  padding-left: 0;
 }
 
 .footer__column-link {
@@ -332,4 +334,6 @@
 .footer__social-icon {
   vertical-align: text-top;
   margin-right: 10px;
+  width: 16px;
+  height: 16px;
 }
