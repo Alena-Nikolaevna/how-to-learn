@@ -5,8 +5,3 @@
     text-decoration: none;
     color: white;
   }
-  
-  .footer__column-link:hover {
-    transition: .5s;
-    opacity: .6;
-  }
